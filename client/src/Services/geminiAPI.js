@@ -1,5 +1,5 @@
-// 🔑 GET YOUR API KEY FROM GOOGLE CLOUD CONSOLE
-const GEMINI_API_KEY = 'AIzaSyAeqNDIj-ArlhCEOuPSVXRwXlWfLsbU_4I'; // Replace with your key
+
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY; 
 
 export const processWithGemini = async (formData, selectedTemplate) => {
   const prompt = `You are a professional resume writer and career consultant. Transform the following raw resume data into polished, professional content. Return the response in valid JSON format only.
@@ -63,7 +63,7 @@ Return JSON in this exact structure:
   try {
     console.log('🚀 Making API call to Gemini...');
     
-    // 🔥 CORRECT ENDPOINT FORMAT FOR GOOGLE CLOUD
+
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${GEMINI_API_KEY}`, {
       method: 'POST',
       headers: {
@@ -121,7 +121,7 @@ Return JSON in this exact structure:
     const generatedText = data.candidates[0].content.parts[0].text;
     console.log('📝 Generated text:', generatedText);
     
-    // Extract JSON from the response
+    
     const jsonMatch = generatedText.match(/\{[\s\S]*\}/);
     if (jsonMatch) {
       const parsedData = JSON.parse(jsonMatch[0]);
