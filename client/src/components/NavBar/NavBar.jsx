@@ -1,29 +1,33 @@
 import { useEffect, useState } from "react";
 import { close, menu } from "../../assets";
+import { Link } from "react-router-dom";
 
 const list = [
   {
     id: "templates",
     title: "Templates",
+    path: "resume",
   },
   {
     id: "features",
     title: "Features",
+    path: "features",
   },
   {
     id: "about",
     title: "About",
+    path: "about",
   },
   {
     id: "contact",
     title: "Contact",
+    path: "contact",
   },
 ];
 const NavBar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,36 +41,45 @@ const NavBar = () => {
     <nav
       className={`sticky ${
         scrolled
-          ? "bg-black/40 text-balck/70 backdrop-blur-sm shadow-lg py-4"
+          ? "bg-black/40 text-balck/70 backdrop-blur-md shadow-lg py-4"
           : "bg-transparent py-6"
       } sm:px-16 px-8 flex justify-between items-center top-0 z-20`}
     >
-      <div className="realtive flex gap-2">
-        <img src="./src/assets/AIR.png" alt="Logo" className="w-12 h-10" />
-        <p className="text-2xl font-bold pt-1 hover:text-[#00FFFF]/80">
-          <span className="text-[#00FFFF]">|</span> AI Resume
-        </p>
-      </div>
+      <Link to="/">
+        <div className="realtive flex gap-2">
+          <img src="./src/assets/AIR.png" alt="Logo" className="w-12 h-10" />
+
+          <p className="text-2xl font-bold pt-1 hover:text-[#00FFFF]/80">
+            <span className="text-[#00FFFF]">|</span> AI Resume
+          </p>
+        </div>
+      </Link>
       <div>
         <ul className="list-none hidden sm:flex  gap-8 w-full">
           {list.map((item) => (
-            <li
-              key={item.id}
-              className={`font-semibold hover:underline cursor-pointer hover:text-[#00FFFF]/80`}
-              onClick={() => setActive(!active)}
-            >
-              {item.title}
-            </li>
+            <Link to={`/${item.path}`}>
+              <li
+                key={item.id}
+                className={`font-semibold hover:underline cursor-pointer hover:text-[#00FFFF]/80`}
+                onClick={() => setActive(!active)}
+              >
+                {item.title}
+              </li>
+            </Link>
           ))}
         </ul>
       </div>
       <div className="hidden sm:flex gap-4">
-        <button className="w-full bg-transparent  border-2 border-[#00FFFF] text-[#00FFFF] hover:bg-[#00FFFF] hover:text-black  p-2 rounded-xl px-4 font-semibold">
-          Login
-        </button>
-        <button className="w-full bg-[#00FFFF] border-2 border-[#00FFFF] text-black hover:bg-transparent hover:text-[#00FFFF]  p-2 rounded-xl px-4 font-semibold">
-          Signup
-        </button>
+        <Link to="/resume">
+          <button className="w-full bg-transparent  border-2 border-[#00FFFF] text-[#00FFFF] hover:bg-[#00FFFF] hover:text-black  p-2 rounded-xl px-4 font-semibold">
+            Get Started
+          </button>
+        </Link>
+        {/* <Link to="/signup">
+          <button className="w-full bg-[#00FFFF] border-2 border-[#00FFFF] text-black hover:bg-transparent hover:text-[#00FFFF]  p-2 rounded-xl px-4 font-semibold">
+            Signup
+          </button>
+        </Link> */}
       </div>
       {/* Mobile View */}
 

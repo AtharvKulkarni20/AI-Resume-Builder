@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const badges = [
   {
@@ -33,9 +34,11 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
+        <Link to="/resume">
         <button className="text-black text-xl rounded-xl my-12 bg-[#00FFFF] hover:bg-[#00FFFF]/80 font-medium hover:text-gray-900 py-4 px-6 border border-[#00FFFF] hover:border-transparent ">
-          Get Started
+          Make Your First AI Resume
         </button>
+        </Link>
         <div>
           {badges.map((badge) => (
             <p
