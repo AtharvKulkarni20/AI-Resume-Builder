@@ -47,7 +47,7 @@ const NavBar = () => {
     >
       <Link to="/">
         <div className="realtive flex gap-2">
-          <img src="./src/assets/AIR.png" alt="Logo" className="w-12 h-10" />
+          <img src="./AIR.png" alt="Logo" className="w-12 h-10" />
 
           <p className="text-2xl font-bold pt-1 hover:text-[#00FFFF]/80">
             <span className="text-[#00FFFF]">|</span> AI Resume
