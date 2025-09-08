@@ -82,7 +82,6 @@ const SignupForm = () => {
         className="relative w-full max-w-md"
       >
         <div className="bg-gray-900/80 backdrop-blur-xl rounded-2xl border border-gray-800 p-8 shadow-2xl">
-          {/* Header */}
           <div className="text-center mb-8">
             <Link to="/" className="inline-flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-teal-400 rounded-lg flex items-center justify-center">
@@ -101,7 +100,6 @@ const SignupForm = () => {
             </p>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">

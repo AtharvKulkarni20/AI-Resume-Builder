@@ -28,7 +28,6 @@ const NotFoundPage = () => {
 
       <StarsCanvas/>
       <div className="max-w-2xl mx-auto text-center">
-        {/* Large 404 */}
         <div className="relative mb-8">
           <h1 className="text-9xl md:text-[12rem] font-bold text-transparent font-sans bg-gradient-to-r from-white to-[#00FFFF]  bg-clip-text leading-none">
             404
@@ -38,7 +37,6 @@ const NotFoundPage = () => {
           </div>
         </div>
 
-        {/* Error Message */}
         <div className="mb-8 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Page Not Found
@@ -49,7 +47,6 @@ const NotFoundPage = () => {
           </p>
         </div>
 
-        {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
           <button
             onClick={handleGoHome}
@@ -68,7 +65,6 @@ const NotFoundPage = () => {
           </button>
         </div>
 
-        {/* Quick Links */}
         <div className="border-t border-gray-800 pt-8">
           <h3 className="text-xl font-semibold mb-6 text-gray-300">
             Or try these popular pages:

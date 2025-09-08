@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import { Star, Quote } from "lucide-react"
 
-// Import Swiper styles
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
@@ -150,7 +149,6 @@ export default function TestimonialsSection() {
           </p>
         </motion.div>
 
-        {/* Desktop Grid Layout */}
         <div className="hidden lg:grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard
@@ -161,7 +159,6 @@ export default function TestimonialsSection() {
           ))}
         </div>
 
-        {/* Mobile/Tablet Carousel */}
         <div className="lg:hidden">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}

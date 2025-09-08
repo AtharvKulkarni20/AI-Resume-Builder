@@ -52,7 +52,6 @@ const ContactSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -136,7 +135,6 @@ const ContactSection = () => {
             </form>
           </motion.div>
 
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

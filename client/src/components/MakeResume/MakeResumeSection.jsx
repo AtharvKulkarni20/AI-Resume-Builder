@@ -7,10 +7,8 @@ import { ArrowRight, Sparkles } from "lucide-react"
 export default function MakeResumeSection() {
   return (
     <section className="py-20 relative overflow-hidden">
-      {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-cyan-500/5 to-primary/10"></div>
 
-      {/* Decorative elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-cyan-500/10 rounded-full blur-xl"></div>
 

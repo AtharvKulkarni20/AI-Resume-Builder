@@ -92,7 +92,6 @@ const ResumeForm = ({ templateType, onSubmit, isLoading }) => {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-8">
-            {/* Personal Information */}
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                 <User className="w-5 h-5 mr-2" />
@@ -149,7 +148,6 @@ const ResumeForm = ({ templateType, onSubmit, isLoading }) => {
               />
             </div>
 
-            {/* Experience */}
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                 <Briefcase className="w-5 h-5 mr-2" />
@@ -224,7 +222,6 @@ const ResumeForm = ({ templateType, onSubmit, isLoading }) => {
               </button>
             </div>
 
-            {/* Skills */}
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                 <Code className="w-5 h-5 mr-2" />
@@ -250,7 +247,6 @@ const ResumeForm = ({ templateType, onSubmit, isLoading }) => {
               />
             </div>
 
-            {/* Education */}
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                 <GraduationCap className="w-5 h-5 mr-2" />
@@ -316,7 +312,6 @@ const ResumeForm = ({ templateType, onSubmit, isLoading }) => {
               </div>
             </div>
 
-            {/* Projects (only for tech template) */}
             {templateType === "tech" && (
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">

@@ -66,7 +66,6 @@ const LoginForm = () => {
             <p className="text-gray-400">Sign in to your account to continue</p>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-4">
               <div>

@@ -61,7 +61,7 @@ const AboutSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* Image/Illustration */}
+
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -78,7 +78,7 @@ const AboutSection = () => {
                 </div>
               </div>
             </div>
-            {/* Floating elements */}
+    
             <motion.div
               animate={{ y: [-10, 10, -10] }}
               transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
@@ -91,7 +91,6 @@ const AboutSection = () => {
             />
           </motion.div>
 
-          {/* Description */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -112,7 +111,6 @@ const AboutSection = () => {
               value proposition.
             </p>
 
-            {/* Key Highlights */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
               {highlights.map((highlight, index) => {
                 const Icon = highlight.icon
@@ -139,7 +137,6 @@ const AboutSection = () => {
           </motion.div>
         </div>
 
-        {/* Animated Counters */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}

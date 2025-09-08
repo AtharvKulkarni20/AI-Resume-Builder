@@ -81,7 +81,6 @@ const NavBar = () => {
           </button>
         </Link> */}
       </div>
-      {/* Mobile View */}
 
       <div className="sm:hidden">
         <button
@@ -93,7 +92,6 @@ const NavBar = () => {
           <img src={toggle ? close : menu} alt="" className="w-6 h-6" />
         </button>
 
-        {/* Mobile Menu Dropdown */}
         <div
           className={`absolute top-full right-0 mt-2 mx-4 p-6 rounded-xl text-black bg-white/90 backdrop-blur-sm
             shadow-xl transition-all duration-300 origin-top

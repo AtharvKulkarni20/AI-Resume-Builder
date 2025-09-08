@@ -8,13 +8,11 @@ import NotFoundPage from "./components/Error/NotFoundPage";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import FeaturesSection from "./components/Features/FeaturesSection";
-// ✅ new pages
 import ResumeBuilder from "./pages/ResumeBuilder/ResumeBuilder";
-
 
 function AppContent() {
   const location = useLocation();
-  const validRoutes = ["/", "/about", "/contact" , "/features",  "/resume", "/resume/form"];
+  const validRoutes = ["/", "/about", "/contact", "/features", "/resume", "/resume/form"];
   const isValidRoute = validRoutes.includes(location.pathname);
 
   return (
@@ -24,11 +22,12 @@ function AppContent() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutSection />} />
         <Route path="/contact" element={<ContactSection />} />
+        <Route path="/features" element={<FeaturesSection />} />
+
+        <Route path="/resume/*" element={<ResumeBuilder />} />
+
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignupForm />} />
-        <Route path="/resume/*" element={<ResumeBuilder />} /> 
-
-        <Route path="/features" element={<FeaturesSection />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
@@ -39,8 +38,8 @@ function AppContent() {
 
 export default function App() {
   return (
-
+    <BrowserRouter>
       <AppContent />
-
+    </BrowserRouter>
   );
 }
